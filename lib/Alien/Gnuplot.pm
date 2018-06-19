@@ -171,7 +171,8 @@ getting it yourself from L<http://www.gnuplot.info>.
 sub load_gnuplot {
 ##############################
 # Search the path for the executable
-#
+    #
+    warn "in load_gnuplot";
     my $exec_path;
     if($ENV{'GNUPLOT_BINARY'}) {
 	$exec_path = $ENV{'GNUPLOT_BINARY'};
@@ -284,6 +285,7 @@ package managers) or get it yourself from L<http://www.gnuplot.info>.
 ##############################
 # Whew.  Now parse out the 'GNUPLOT' and version number...
     my $lines = join("", map { chomp $_; $_} @lines);
+    warn "gnuplot response: $lines";
     $lines =~ s/\s+G N U P L O T\s*//  or  die qq{
 Alien::Gnuplot: the executable '$exec_path' appears not to be gnuplot,
 or perhaps there was a problem running it.  You can remove it or set
