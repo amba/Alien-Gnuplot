@@ -19,6 +19,28 @@ perl:
     - "5.16"
     - "5.14"
 
+matrix:
+  enclude:
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    - perl: 5.18
+    
+
 install:
   # Install gnuplot 5 for plot tests. (Not available on Ubuntu 12.04)
   - cd /tmp
